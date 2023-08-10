@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import langContext from "./context/LanguageContext";
+import langContext from "./LanguageContext";
 const LangButtons = ({ language, setLanguage }) => {
   return (
     <>

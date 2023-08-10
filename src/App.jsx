@@ -8,7 +8,7 @@ import { useState } from "react";
 
 import LanguageBox from "./LanguageBox";
 
-import LangContext from "./context/LanguageContext";
+import LangContext from "./LanguageContext";
 const App = () => {
   const [language, setLanguage] = useState({ code: "en", display: "English" });
   // if (language.code != "en") {

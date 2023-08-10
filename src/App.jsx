@@ -6,7 +6,7 @@ import "react-chatbot-kit/build/main.css";
 import "./app.css";
 import { useState } from "react";
 import axios from "axios";
-import LanguageBox from "./languageBox";
+import LanguageBox from "./LanguageBox";
 import { options } from "./config";
 import langContext from "./context/languageContext";
 const App = () => {

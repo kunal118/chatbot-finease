@@ -3,7 +3,7 @@ import React from "react";
 import { useContext } from "react";
 import axios from "axios";
 import { options } from "./config";
-import LangContext from "./context/LanguageContext";
+import LangContext from "./context/LanguageContext.jsx";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const lang = useContext(LangContext);
   // console.log(lang);

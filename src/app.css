@@ -21,6 +21,7 @@ body {
 .react-chatbot-kit-chat-input-container {
   position: fixed;
   height: 8vh;
+  bottom: 0;
 
   /* margin-bottom: 30em; */
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import langContext from "./context/languageContext";
+import langContext from "./context/LanguageContext";
 import { useContext } from "react";
 import axios from "axios";
 import { options } from "./config";

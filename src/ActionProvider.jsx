@@ -1,10 +1,11 @@
 import React from "react";
-import langContext from "./context/LanguageContext";
+
 import { useContext } from "react";
 import axios from "axios";
 import { options } from "./config";
+import LangContext from "./context/LanguageContext";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const lang = useContext(langContext);
+  const lang = useContext(LangContext);
   // console.log(lang);
   const handleHello = async () => {
     let response;

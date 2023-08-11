@@ -13,6 +13,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   function handleHello() {
     var myHeaders = new Headers();
     myHeaders.append("accept", "application/json");
+    myHeaders.append("Access-Control-Allow-Origin", "http://localhost:8000");
+    myHeaders.append("Access-Control-Allow-Origin", "http://localhost:5173");
 
     var requestOptions = {
       method: "POST",
@@ -21,21 +23,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     };
 
     fetch(
-      "https://f8d8-117-203-246-41.ngrok-free.app/gpt/?prompt=hi",
+      "https://f8d8-117-203-246-41.ngrok-free.app/gpt/?prompt= Hey these are the details of a user ,currentBalance= 101666.33 , accountType= FIXED,compoundingFrequency=HALF-YEARLY,currentValue: 119845.90,\n    interestComputation: COMPOUND,interestPayout: HALF-YEARLY,interestPeriodicPayoutAmount: 0,interestRate: 2,principalAmount: 109890.98,\n    tenureDays: 180,cashLimit of credit card: 20000,currentDue: 3000,loyaltyPoints: 2450,minDueAmount: 1346,previousDueAmount: 7654,\n    totalDueAmount: 9756,shareHolerEquityType: COMMON-STOCK , now on the basis of above details you need to provide financial planning to the user,\n    just keep the text verbose.less than 50 words.give in bullets\n",
       requestOptions
     )
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
-
-    // options.params["to[0]"] = lang.code;
-    // try {
-    //   options.data[0].Text = "hello ok";
-    //   response = await axios.request(options);
-    // } catch (error) {
-    //   console.error(error);
-    // }
-    // console.log(response.data[0].translations[0].text);
     let botMessage = createChatBotMessage();
     // response.data[0].translations[0].text
     setState((prev) => ({
